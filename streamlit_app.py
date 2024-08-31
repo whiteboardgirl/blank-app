@@ -7,7 +7,6 @@ import nltk
 from nltk.corpus import stopwords
 from collections import Counter
 from sklearn.feature_extraction.text import CountVectorizer
-from wordcloud import WordCloud
 from nltk import ngrams
 from gensim import corpora
 from gensim.models import LdaModel
@@ -56,14 +55,6 @@ if uploaded_file:
         # Display the most common words
         common_words = word_counts.most_common(20)
         st.write("Most Common Words:", common_words)
-
-        # Word Cloud
-        st.subheader("Word Cloud")
-        wordcloud = WordCloud(width=800, height=400, background_color='white').generate(' '.join(words))
-        plt.figure(figsize=(10, 5))
-        plt.imshow(wordcloud, interpolation='bilinear')
-        plt.axis('off')
-        st.pyplot(plt)
 
         # Word Connection Visualization
         st.subheader("Word Connection Network")
