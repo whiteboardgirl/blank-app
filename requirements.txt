@@ -4,7 +4,6 @@ matplotlib==3.7.1
 seaborn==0.12.2
 networkx==3.1
 nltk==3.8.1
-wordcloud==1.8.1  # Downgraded to avoid build issues
 gensim==4.3.3
 pyLDAvis==3.4.0
 scikit-learn==1.2.2
